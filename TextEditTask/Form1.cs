@@ -113,7 +113,7 @@ namespace TextEditTask
                             if (editWord.Length > amountSymbols) fileEditText += editWord + ' ';
                         }
                     fileEditText =  fileEditText.Remove(fileEditText.LastIndexOf(' '), 1);
-                    file.WriteLine(fileEditText, false, Encoding.GetEncoding("Windows-1251"));
+                    file.WriteLine(fileEditText, false, this.encoding);
                     fileEditText = "";
                     }
               }
@@ -146,7 +146,7 @@ namespace TextEditTask
                         if (editWord.Length > amountSymbols) fileEditText += editWord + ' ';
                     }
                     fileEditText = fileEditText.Remove(fileEditText.LastIndexOf(' '), 1);
-                    file.WriteLine(fileEditText, false, Encoding.GetEncoding("Windows-1251"));
+                    file.WriteLine(fileEditText, false, this.encoding);
                     fileEditText = "";
                 }
             }
@@ -170,7 +170,7 @@ namespace TextEditTask
             if (this.fileLoadName != null && fileSaveName!= null && checkCorrect())
             {
                 ListViewItem item = new ListViewItem(fileSaveName);
-                item.SubItems.Add("Progress");
+                item.SubItems.Add("Processing");
                 listView1.Items.Add(item);
                 ThreadPool.QueueUserWorkItem(new WaitCallback((s) =>
                 {
