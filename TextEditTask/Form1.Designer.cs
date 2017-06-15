@@ -101,7 +101,7 @@
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(191)))), ((int)(((byte)(204)))));
             this.button2.Location = new System.Drawing.Point(142, 67);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(140, 32);
+            this.button2.Size = new System.Drawing.Size(134, 32);
             this.button2.TabIndex = 6;
             this.button2.Text = "Start";
             this.button2.UseVisualStyleBackColor = false;
@@ -137,9 +137,11 @@
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(1, -1);
+            this.panel1.BackgroundImage = global::TextEditTask.Properties.Resources._1;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Location = new System.Drawing.Point(-6, -1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(284, 62);
+            this.panel1.Size = new System.Drawing.Size(288, 69);
             this.panel1.TabIndex = 8;
             // 
             // Form1

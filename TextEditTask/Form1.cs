@@ -156,8 +156,10 @@ namespace TextEditTask
 
         public void InvokeMethod()     
         {
-            var indexItem = listView1.FindItemWithText(fileSaveName).Index; 
-            listView1.Items[indexItem].SubItems[1].Text = "Complete";                   
+            var indexItem = listView1.FindItemWithText(fileSaveName).Index;
+            while (listView1.Items[indexItem].SubItems[1].Text == "Complete")
+                indexItem++;
+                listView1.Items[indexItem].SubItems[1].Text = "Complete";                   
         }
 
         private void button2_Click(object sender, EventArgs e)
